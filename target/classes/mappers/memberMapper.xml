@@ -26,5 +26,21 @@
 		update member set last_login = now()
 		where email =#{email}
 	</update>
+	
+	<select id="selectList" resultType="com.myweb.www.security.MemberVO">
+		select * from member
+	</select>
+	
+	<select id="getUser" resultType="com.myweb.www.security.MemberVO">
+		select * from member where email = #{email}
+	</select>
+	
+	<update id="update">
+		update member set pwd =#{pwd}, nick_name = #{nickName} where email = #{email}
+	</update>
+	
+	<select id="selectAuth" resultType="com.myweb.www.security.AuthVO">
+		select * from auth_member where email = #{email}
+	</select>
 
 </mapper>

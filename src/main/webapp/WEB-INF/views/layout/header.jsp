@@ -57,12 +57,12 @@
          		 	<a class="nav-link" href="/member/list">회원리스트 ${authNick }(${authEmail}/ADMIN)</a>
       			</li>   
       			<li class="nav-item">
-         		 	<a class="nav-link" href="/member/modify">회원정보수정 ${authNick }(${authEmail})</a>
+         		 	<a class="nav-link" href="/member/modify/${authEmail}">${authNick }(${authEmail})</a>
       			</li>  
         	</c:when>
         	<c:otherwise>
         		<li class="nav-item">
-         		 	<a class="nav-link" href="/member/modify">회원정보수정 ${authNick }(${authEmail})</a>
+         		 	<a class="nav-link" href="/member/modify/${authEmail}">${authNick }(${authEmail})</a>
       			</li>  
         	</c:otherwise>
         </c:choose>
